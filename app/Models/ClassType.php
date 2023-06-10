@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ClassType extends Model
 {
     use HasFactory;
+
+    public function scheduledClasses(){
+        return $this->hasMany(ScheduledClass::class);
+    }
 }
